@@ -18,19 +18,21 @@
       <form class="mx-auto" action="/login/login.html">
         <h4 class="text-center">Register</h4>
         <div class="name mb-3 mt-5">
-          <label  class="form-label">First Name</label>
+          <label  class="form-label">First name</label>
           <input
             type="text"
             class="form-control"
             id="exampleInputName1"
+            required
           />
         </div>
         <div class="name mb-3 mt-5">
-          <label  class="form-label">Last Name</label>
+          <label  class="form-label">Last name</label>
           <input
             type="text"
             class="form-control"
             id="exampleInputName2"
+            required
           />
         </div>
         <div class="mb-3 mt-5">
@@ -41,6 +43,7 @@
             type="date"
             class="form-control"
             id="exampleInputDateOfBirth"
+            required
           />
         </div>
         <div class="mb-3 mt-5">
@@ -49,6 +52,7 @@
             type="number"
             class="form-control"
             id="exampleInputAge"
+            required
           />
         </div>
         <div class="mb-3 mt-5">
@@ -72,15 +76,12 @@
             type="email"
             class="form-control"
             id="exampleInputEmail1"
+            required
           />
         </div>
         <div class="mb-3">
           <label  class="form-label">Address</label>
-          <input
-            type="text"
-            class="form-control"
-            id="exampleInputAddress"
-          />
+          <textarea class="form-control" name="" id="exampleInputAddress" rows="2"></textarea>
         </div>
         <div class="mb-3">
           <label  class="form-label">State</label>
@@ -100,11 +101,12 @@
         </div>
 
         <div class="mb-3 mt-5">
-          <label  class="form-label">User Name</label>
+          <label  class="form-label">User name</label>
           <input
             type="text"
             class="form-control"
             id="exampleInputUserName"
+            required
           />
         </div>
         <div class="mb-3">
@@ -113,16 +115,18 @@
             type="password"
             class="form-control"
             id="exampleInputPassword1"
+            required
           />
         </div>
         <div class="mb-3">
           <label  class="form-label"
-            >Confirm Password</label
+            >Confirm password</label
           >
           <input
             type="password"
             class="form-control"
             id="exampleInputConfirmPassword"
+            required
           />
         </div>
         <button type="submit" class="btn btn-primary mt-4">Register</button>

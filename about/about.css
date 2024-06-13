@@ -1,24 +1,30 @@
 *{
     padding:0;
     margin: 0;
+    
  
  }
  .navbar{
-     background: linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(74,14,154,1) 35%,rgba(0,212,225,1) 100%);
-     width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgb(1, 0, 12) 0%,
+    rgb(40, 40, 41) 35%,
+    rgb(81, 81, 81) 100%
+  );      width: 100%;
      height: 56px;
  }
  .nav-link{
      color: rgb(240, 243, 246);
  }
+ .nav-link:hover {
+  color: rgb(167, 169, 172);
+}
  .img{
      width: 100px;
      height: 56px;
  }
 
- html {
-    box-sizing: border-box;
-  }
+
   
   *, *:before, *:after {
     box-sizing: inherit;
@@ -39,9 +45,95 @@
   .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
+    background: linear-gradient(
+      90deg,
+      rgb(1, 0, 12) 0%,
+      rgb(40, 40, 41) 35%,
+      rgb(81, 81, 81) 100%
+    );  
+    
     color: white;
   }
 
+
+  .footer {
+    background: linear-gradient(
+      90deg,
+      rgb(1, 0, 12) 0%,
+      rgb(40, 40, 41) 35%,
+      rgb(81, 81, 81) 100%
+    ); 
+    padding: 100px 0px;
+    font-family: "Play", sans-serif;
+    text-align: center;
+    height: 100px;
+  }
+  
+  .footer.column {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgb(197, 15, 145) 35%,
+      rgb(202, 40, 178) 100%
+    );
+    font-size: 0.8em;
+  }
+  
+  .footer .column a {
+    text-decoration: none;
+    color: rgb(229, 237, 247);
+    transition: 0.5s;
+    font-size: 28px; /* Increase this value as needed */
+  
+  }
+  .footer .row a {
+    text-decoration: none;
+    color: rgb(240, 244, 249);
+    transition: 0.5s;
+  }
+  
+  .footer .column a:hover {
+    color: #86848c;
+  }
+  .footer .row a:hover {
+    color: #8d8c95;
+  }
+  
+  .footer .row ul {
+    width: 100%;
+  }
+  
+  .footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+  }
+  
+  .footer .row a i {
+    font-size: 2em;
+  }
+  
+  @media (max-width: 720px) {
+    .footer {
+      text-align: left;
+      padding: 5%;
+    }
+    .footer .row ul li {
+      display: block;
+      margin: 10px 0px;
+      text-align: left;
+    }
+    .footer .row a i {
+      margin: 0% 3%;
+    }
+  }
+
+  .img-background{
+    background: linear-gradient(
+        90deg,
+        rgb(1, 0, 12) 0%,
+        rgb(40, 40, 41) 35%,
+        rgb(81, 81, 81) 100%
+      ); 
+  }
   
 

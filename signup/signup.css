@@ -7,8 +7,12 @@
 }
 
  body{
-    background: linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(74,14,154,1) 35%,rgba(0,212,225,1) 100%);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    background: linear-gradient(
+        90deg,
+        rgb(1, 0, 12) 0%,
+        rgb(40, 40, 41) 35%,
+        rgb(81, 81, 81) 100%
+      );     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 form{
    width: 30%;
@@ -21,8 +25,12 @@ form{
     width: 100%;
     border:none;
     border-radius:50px ;
-    background: linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(74,14,154,1) 35%,rgba(0,212,225,1) 100%);
-
+    background: linear-gradient(
+        90deg,
+        rgb(1, 0, 12) 0%,
+        rgb(40, 40, 41) 35%,
+        rgb(81, 81, 81) 100%
+      ); 
 }
 .form-control{
     color: rgba(0, 0, 0,.87);
