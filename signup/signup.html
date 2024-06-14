@@ -15,25 +15,27 @@
 
   <body>
     <div class="container-fluid">
-      <form class="mx-auto" action="/login/login.html">
+      <form class="mx-auto" id="form" action="/login/login.html">
         <h4 class="text-center">Register</h4>
         <div class="name mb-3 mt-5">
           <label  class="form-label">First name</label>
           <input
             type="text"
             class="form-control"
-            id="exampleInputName1"
-            required
+            id="firstName"
           />
+          <p id="firstName_error"></p>
         </div>
         <div class="name mb-3 mt-5">
           <label  class="form-label">Last name</label>
           <input
             type="text"
             class="form-control"
-            id="exampleInputName2"
-            required
+            id="lastName"
+            
           />
+          <p id="lastName_error"></p>
+
         </div>
         <div class="mb-3 mt-5">
           <label  class="form-label"
@@ -42,31 +44,34 @@
           <input
             type="date"
             class="form-control"
-            id="exampleInputDateOfBirth"
-            required
+            id="dateOfBirth"
+
           />
+          <p id="DOB_error"></p>
+
         </div>
         <div class="mb-3 mt-5">
           <label  class="form-label">Age</label>
           <input
             type="number"
             class="form-control"
-            id="exampleInputAge"
-            required
+            id="age"
           />
+          <p id="age_error"></p>
         </div>
         <div class="mb-3 mt-5">
           <label  class="form-label">Gender</label
           ><br />
           <label>
-            <input type="radio" name="male" value="male" /> Male &nbsp
+            <input type="radio" name="male" value="male" id="male" /> Male &nbsp
           </label>
           <label>
-            <input type="radio" name="female" value="female" /> Female &nbsp
+            <input type="radio" name="male" value="female" id="female" /> Female &nbsp
           </label>
           <label>
-            <input type="radio" name="others" value="others" /> Others &nbsp
+            <input type="radio" name="male" value="others" id="others" /> Others &nbsp
           </label>
+          <p id="checked"></p>
         </div>
         <div class="mb-3">
           <label  class="form-label"
@@ -75,29 +80,33 @@
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
-            required
+            id="email"
+            
           />
+          <p id="email_error"></p>
+
         </div>
         <div class="mb-3">
           <label  class="form-label">Address</label>
-          <textarea class="form-control" name="" id="exampleInputAddress" rows="2"></textarea>
+          <textarea class="form-control" name="" id="address" rows="2"></textarea>
+          <p id="address_error"></p>
         </div>
         <div class="mb-3">
           <label  class="form-label">State</label>
-          <select name="state" id="state">
+          <select name="state" id="state" onclick="changeValue(this.value)">
+            <option  disabled selected>State</option>
             <option value="kerala">Kerala</option>
             <option value="Karnataka">Karnataka</option>
             <option value="Tamilnadu">Tamilnadu</option>
           </select>
+          <p id="state_error"></p>
         </div>
         <div class="mb-3">
-          <label  class="form-label">City</label>
+          <label  class="form-label">District</label>
           <select name="city" id="city">
-            <option value="Palakkad">Palakkad</option>
-            <option value="Ernakulam">Ernakulam</option>
-            <option value="Kollam">Kollam</option>
+            <option disabled selected>District</option>
           </select>
+          <p id="district_error"></p>
         </div>
 
         <div class="mb-3 mt-5">
@@ -105,18 +114,22 @@
           <input
             type="text"
             class="form-control"
-            id="exampleInputUserName"
-            required
+            id="userName"
+            
           />
+          <p id="userName_error"></p>
+
         </div>
         <div class="mb-3">
           <label  class="form-label">Password</label>
           <input
             type="password"
             class="form-control"
-            id="exampleInputPassword1"
-            required
+            id="password"
+            
           />
+          <p id="password_error"></p>
+
         </div>
         <div class="mb-3">
           <label  class="form-label"
@@ -125,9 +138,11 @@
           <input
             type="password"
             class="form-control"
-            id="exampleInputConfirmPassword"
-            required
+            id="confirmPassword"
+            
           />
+          <p id="confirmPassword_error"></p>
+
         </div>
         <button type="submit" class="btn btn-primary mt-4">Register</button>
         <div  class="form-text mt-3" style="text-align: center;">
@@ -141,4 +156,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script src="/validation/signup-validation.js"></script>
 </html>
