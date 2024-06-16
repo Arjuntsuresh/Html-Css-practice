@@ -172,3 +172,61 @@
     rgb(81, 81, 81) 100%
   ); 
 }
+/* Styling for popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+/* Styling for popup content */
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px; /* Adjust width as needed */
+  text-align: center; /* Center-align text content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+}
+
+.close {
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888; /* Close icon color */
+}
+
+/* Styling for input and textarea */
+.popup-content input[type="email"],
+.popup-content textarea {
+  width: calc(100% - 40px); /* Adjust width minus padding */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Styling for submit button */
+.popup-content .btn-1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content .btn-1:hover {
+  background-color: #0056b3;
+}

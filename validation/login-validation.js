@@ -1,34 +1,33 @@
-const email=document.getElementById('email');
-const password=document.getElementById('password');
-const form=document.getElementById('form');
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const form = document.getElementById("form");
 
-const email_error=document.getElementById('email_error');
-const password_error=document.getElementById('password_error');
+const email_error = document.getElementById("email_error");
+const password_error = document.getElementById("password_error");
 
-form.addEventListener('submit',(y)=>{
+//form validation
+form.addEventListener("submit", (y) => {
+  if (email.value.trim() === "") {
+    email_error.innerHTML = "Email is required!";
+    y.preventDefault();
+  } else {
+    const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@gmail\.com$/;
+    if (!email.value.match(emailPattern)) {
+      email_error.innerHTML = "Email does not exist or was misspelled.";
+      y.preventDefault();
+    } else {
+      email_error.innerHTML = "";
+    }
+  }
 
-    let email_check= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if(email.value =='' || email.value ==null){
-        y.preventDefault();
-        email_error.innerHTML='Email is required!';
-    }
-    else{
-        email_error.innerHTML='';
-    }
-    if(!email.value.match(email_check)){
-        y.preventDefault();
-        email_error.innerHTML='Email is required!';
-    }
-    else{
-        email_error.innerHTML='';
-    }
-    if(password.value==''){
-        y.preventDefault();
-        password_error.innerHTML='Password is required!';
-    }
-    else{
-        password_error.innerHTML='';
-    }
-})
-email_error.style.color='red';
-password_error.style.color='red';
+  if (password.value === "") {
+    password_error.innerHTML = "Password is required!";
+    y.preventDefault();
+  } else if (password.value.length <= 6) {
+    password_error.innerHTML = "Password should be more than 6 characters.";
+    y.preventDefault();
+  }
+});
+//error color
+email_error.style.color = "red";
+password_error.style.color = "red";
