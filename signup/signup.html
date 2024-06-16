@@ -120,8 +120,8 @@
         </div>
         <div class="mb-3">
           <label  class="form-label">State</label>
-          <select name="state" id="state" onclick="changeValue(this.value)">
-            <option  disabled selected>State</option>
+          <select name="state" onclick="changeValue(this.value)">
+            <option  disabled selected id="state" value="state">State</option>
             <option value="kerala">Kerala</option>
             <option value="Karnataka">Karnataka</option>
             <option value="Tamilnadu">Tamilnadu</option>
@@ -130,8 +130,8 @@
         </div>
         <div class="mb-3">
           <label  class="form-label">District</label>
-          <select name="city" id="city">
-            <option disabled selected>District</option>
+          <select name="city">
+            <option disabled selected id="city">District</option>
           </select>
           <p id="district_error"></p>
         </div>
@@ -163,7 +163,6 @@
             <p class="invalid" id="capital">Uppercase letters</p>
             <p class="invalid" id="number">Numbers</p>
             <p class="invalid" id="length">Atleast 8 Characters</p>
-
           </div>
 
         </div>

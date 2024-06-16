@@ -55,6 +55,9 @@ form{
         rgb(81, 81, 81) 100%
       ); 
 }
+.btn-primary:hover{
+  color: rgb(133, 133, 136);
+}
 .form-control{
     color: rgba(0, 0, 0,.87);
     border-bottom-color: rgba(0, 0, 0,.42);

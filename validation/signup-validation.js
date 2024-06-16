@@ -10,21 +10,27 @@ const password=document.getElementById('password');
 const confirmPassword=document.getElementById('confirmPassword');
 const form=document.getElementById('form')
 //access the error tags
-const firstName_error=document.getElementById('firstName_error')
-const lastName_error=document.getElementById('lastName_error')
-const DOB_error=document.getElementById('DOB_error')
-const age_error=document.getElementById('age_error')
-const email_error=document.getElementById('email_error')
-const address_error=document.getElementById('address_error')
-const userName_error=document.getElementById('userName_error')
-const password_error=document.getElementById('password_error')
-const confirmPassword_error=document.getElementById('confirmPassword_error')
+const firstName_error=document.getElementById('firstName_error');
+const lastName_error=document.getElementById('lastName_error');
+const DOB_error=document.getElementById('DOB_error');
+const age_error=document.getElementById('age_error');
+const email_error=document.getElementById('email_error');
+const address_error=document.getElementById('address_error');
+const userName_error=document.getElementById('userName_error');
+const password_error=document.getElementById('password_error');
+const confirmPassword_error=document.getElementById('confirmPassword_error');
 //access the checkbox
 const male = document.getElementById('male');
 const female=document.getElementById('female');
 const others=document.getElementById('others');
 //check box error tags
 const checkBox_error=document.getElementById('checked');
+//access the dropdown
+const state_drop=document.getElementById('state').value;
+const district_drop=document.getElementById('city').value;
+const state_error=document.getElementById('state_error');
+const district_error=document.getElementById('district_error');
+
 //form validation
 form.addEventListener('submit',(x)=>{
     firstName_error.innerHTML = '';
