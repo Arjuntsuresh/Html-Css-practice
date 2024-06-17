@@ -31,3 +31,12 @@ form.addEventListener("submit", (y) => {
 //error color
 email_error.style.color = "red";
 password_error.style.color = "red";
+
+function onFocusEvent(x){
+  x.style.color='black'
+  x.style.backgroundColor='rgb(133, 133, 136)'
+}
+function onBlurEvent(x){
+  x.style.color='black'
+  x.style.backgroundColor='white'
+}

@@ -237,20 +237,18 @@ let state={
 }
 
 //state wise drop down function
-function changeValue(value){
-
-    if(value.length==0){
-        document.getElementById('city').innerHTML='';
-    }
-    else{
-        let common=''
-        for(id in state[value]){
-            common+="<option>" + state[value][id]+ "</option>"
+ function changeValue(value) {
+        const citySelect = document.getElementsByName('city')[0];
+        if (value.length === 0) {
+            citySelect.innerHTML = '<option disabled selected>District</option>';
+        } else {
+            let options = '<option disabled selected>District</option>';
+            for (let id in state[value]) {
+                options += "<option>" + state[value][id] + "</option>";
+            }
+            citySelect.innerHTML = options;
         }
-        document.getElementById('city').innerHTML=common;
-
     }
-}
 
   // Show/Hide password
   $(".toggle-password").click(function() {
@@ -325,7 +323,15 @@ password.onkeyup = function() {
     }
 };
 
-
+//onkey up and onblur
+function onFocusEvent(x){
+    x.style.color='black'
+    x.style.backgroundColor='rgb(133, 133, 136)'
+  }
+  function onBlurEvent(x){
+    x.style.color='black'
+    x.style.backgroundColor='white'
+  }
 
 
 

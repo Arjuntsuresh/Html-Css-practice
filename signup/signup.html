@@ -49,6 +49,8 @@
             type="text"
             class="form-control"
             id="firstName"
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
+
           />
           <p id="firstName_error"></p>
         </div>
@@ -58,7 +60,7 @@
             type="text"
             class="form-control"
             id="lastName"
-            
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
           />
           <p id="lastName_error"></p>
 
@@ -71,6 +73,7 @@
           type="date"
           class="form-control"
           id="dateOfBirth"
+          onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
       />
       
           <p id="DOB_error"></p>
@@ -83,6 +86,7 @@
             class="form-control"
             id="age"
             readonly
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
           />
           <p id="age_error"></p>
         </div>
@@ -90,13 +94,13 @@
           <label  class="form-label">Gender</label
           ><br />
           <label>
-            <input type="radio" name="male" value="male" id="male" /> Male &nbsp
+            <input type="radio" name="male" value="male" id="male" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" /> Male &nbsp
           </label>
           <label>
-            <input type="radio" name="male" value="female" id="female" /> Female &nbsp
+            <input type="radio" name="male" value="female" id="female" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" /> Female &nbsp
           </label>
           <label>
-            <input type="radio" name="male" value="others" id="others" /> Others &nbsp
+            <input type="radio" name="male" value="others" id="others" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" /> Others &nbsp
           </label>
           <p id="checked"></p>
         </div>
@@ -108,20 +112,20 @@
             type="email"
             class="form-control"
             id="email"
-            
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
           />
           <p id="email_error"></p>
 
         </div>
         <div class="mb-3">
           <label  class="form-label">Address</label>
-          <textarea class="form-control" name="" id="address" rows="2"></textarea>
+          <textarea class="form-control" name="" id="address" rows="2" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"></textarea>
           <p id="address_error"></p>
         </div>
         <div class="mb-3">
           <label  class="form-label">State</label>
           <select name="state" onclick="changeValue(this.value)">
-            <option  disabled selected id="state" value="state">State</option>
+            <option  disabled selected id="state">State</option>
             <option value="kerala">Kerala</option>
             <option value="Karnataka">Karnataka</option>
             <option value="Tamilnadu">Tamilnadu</option>
@@ -142,7 +146,7 @@
             type="text"
             class="form-control"
             id="userName"
-            
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
           />
           <p id="userName_error"></p>
 
@@ -153,7 +157,7 @@
             type="password"
             class="form-control"
             id="password"
-            
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
           />
           <p id="password_error"></p>
           <span class="toggle-password"></span>
@@ -174,7 +178,7 @@
             type="password"
             class="form-control"
             id="confirmPassword"
-            
+            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
           />
           <p id="confirmPassword_error"></p>
 
