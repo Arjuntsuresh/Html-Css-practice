@@ -6,12 +6,12 @@
     box-sizing: border-box;
 }
   .navbar {
-      background: linear-gradient(
-          90deg,
-          rgb(1, 0, 16) 0%,
-          rgb(40, 40, 41) 35%,
-          rgb(81, 81, 81) 100%
-        );
+    background: linear-gradient(
+      90deg,
+      rgb(2, 0, 36,1) 0%,
+      rgb(74, 14, 154,1) 35%,
+      rgb(0, 212, 225,1) 100%
+    ); 
     width: 100%;
     height: 56px;
   }
@@ -27,12 +27,13 @@
   }
 
  body{
-    background: linear-gradient(
-        90deg,
-        rgb(1, 0, 12) 0%,
-        rgb(40, 40, 41) 35%,
-        rgb(81, 81, 81) 100%
-      );     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  background: linear-gradient(
+    90deg,
+    rgb(2, 0, 36,1) 0%,
+    rgb(74, 14, 154,1) 35%,
+    rgb(0, 212, 225,1) 100%
+  );   
+       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 form{
    width: 30%;
@@ -47,9 +48,9 @@ form{
     border-radius:50px ;
     background: linear-gradient(
         90deg,
-        rgb(1, 0, 12) 0%,
-        rgb(40, 40, 41) 35%,
-        rgb(81, 81, 81) 100%
+        rgb(2, 0, 36,1) 0%,
+        rgb(74, 14, 154,1) 35%,
+        rgb(0, 212, 225,1) 100%
       ); 
 }
 .btn-primary:hover{
@@ -97,12 +98,12 @@ p{
   }
 
  .footer {
-    background: linear-gradient(
-      90deg,
-      rgb(1, 0, 12) 0%,
-      rgb(40, 40, 41) 35%,
-      rgb(81, 81, 81) 100%
-    ); 
+  background: linear-gradient(
+    90deg,
+    rgb(2, 0, 36,1) 0%,
+    rgb(74, 14, 154,1) 35%,
+    rgb(0, 212, 225,1) 100%
+  ); 
     padding: 100px 0px;
     font-family: "Play", sans-serif;
     text-align: center;

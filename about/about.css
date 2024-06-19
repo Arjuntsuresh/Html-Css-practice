@@ -7,10 +7,11 @@
  .navbar{
   background: linear-gradient(
     90deg,
-    rgb(1, 0, 12) 0%,
-    rgb(40, 40, 41) 35%,
-    rgb(81, 81, 81) 100%
-  );      width: 100%;
+    rgb(2, 0, 36,1) 0%,
+    rgb(74, 14, 154,1) 35%,
+    rgb(0, 212, 225,1) 100%
+  );    
+    width: 100%;
      height: 56px;
  }
  .nav-link{
@@ -47,9 +48,9 @@
     text-align: center;
     background: linear-gradient(
       90deg,
-      rgb(1, 0, 12) 0%,
-      rgb(40, 40, 41) 35%,
-      rgb(81, 81, 81) 100%
+      rgb(2, 0, 36,1) 0%,
+      rgb(74, 14, 154,1) 35%,
+      rgb(0, 212, 225,1) 100%
     );  
     
     color: white;
@@ -58,11 +59,11 @@
 
   .footer {
     background: linear-gradient(
-      90deg,
-      rgb(1, 0, 12) 0%,
-      rgb(40, 40, 41) 35%,
-      rgb(81, 81, 81) 100%
-    ); 
+        90deg,
+        rgb(2, 0, 36,1) 0%,
+        rgb(74, 14, 154,1) 35%,
+        rgb(0, 212, 225,1) 100%
+      ); 
     padding: 100px 0px;
     font-family: "Play", sans-serif;
     text-align: center;
@@ -72,10 +73,10 @@
   .footer.column {
     background: linear-gradient(
       90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgb(197, 15, 145) 35%,
-      rgb(202, 40, 178) 100%
-    );
+      rgb(2, 0, 36,1) 0%,
+      rgb(74, 14, 154,1) 35%,
+      rgb(0, 212, 225,1) 100%
+    ); 
     font-size: 0.8em;
   }
   
@@ -130,9 +131,9 @@
   .img-background{
     background: linear-gradient(
         90deg,
-        rgb(1, 0, 12) 0%,
-        rgb(40, 40, 41) 35%,
-        rgb(81, 81, 81) 100%
+        rgb(2, 0, 36,1) 0%,
+        rgb(74, 14, 154,1) 35%,
+        rgb(0, 212, 225,1) 100%
       ); 
   }
 

@@ -1,275 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/signup/signup.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/conflict-detection.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Signup</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/signup/signup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/conflict-detection.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <title>Signup</title>
+</head>
+<style>
+  form i {
+      cursor: pointer;
+      padding-left: 95%;
+  }
+</style>
 
-  <body>
+<body>
 
-    <div class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="/home/home.html">
-          <img class="img" src="/home/bird-colorful-gradient-design-vector_343694-2506-removebg-preview.png"
-              alt="Logo">
-      </a>
-      <p style="color: aliceblue; padding-top: 20px; font-size: larger; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PedalPlex</p>
 
-      <div class="collapse navbar-collapse justify-content-end">
-          <ul class="nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/about/about.html">About us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/login/login.html">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/contactus/contact.html">Contact us</a>
-              </li>
-          </ul>
-      </div>
+  <div class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/home/home.html">
+      <img class="img" src="/home/bird-colorful-gradient-design-vector_343694-2506-removebg-preview.png" alt="Logo">
+    </a>
+    <p
+      style="color: aliceblue; padding-top: 20px; font-size: larger; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      PedalPlex</p>
+
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/about/about.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login/login.html">Signin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contactus/contact.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
   </div>
 
-    <div class="container-fluid">
-      <form class="mx-auto" id="form" action="/login/login.html">
-        <h4 class="text-center">Signup</h4>
-        <div class="name mb-3 mt-5">
-          <label  class="form-label">Firstname</label>
-          <input
-            type="text"
-            class="form-control"
-            id="firstName"
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
+  <div class="container-fluid">
+    <form class="mx-auto" id="form" action="/login/login.html">
+      <h4 class="text-center">Sign up</h4>
+      <div class="name mb-3 mt-5">
+        <label class="form-label">First name</label>
+        <input type="text" class="form-control" id="firstName" onfocus="onFocusEvent(this)"
+          onblur="onBlurEvent(this)" />
+        <p id="firstName_error"></p>
+      </div>
+      <div class="name mb-3 mt-5">
+        <label class="form-label">Last name</label>
+        <input type="text" class="form-control" id="lastName" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" />
+        <p id="lastName_error"></p>
 
-          />
-          <p id="firstName_error"></p>
-        </div>
-        <div class="name mb-3 mt-5">
-          <label  class="form-label">Lastname</label>
-          <input
-            type="text"
-            class="form-control"
-            id="lastName"
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-          />
-          <p id="lastName_error"></p>
+      </div>
+      <div class="mb-3 mt-5">
+        <label class="form-label">Date of birth</label>
+        <input type="date" class="form-control" id="dateOfBirth" onfocus="onFocusEvent(this)"
+          onblur="onBlurEvent(this)" />
 
-        </div>
-        <div class="mb-3 mt-5">
-          <label  class="form-label"
-            >Date of Birth</label
-          >
-          <input
-          type="date"
-          class="form-control"
-          id="dateOfBirth"
-          onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-      />
-      
-          <p id="DOB_error"></p>
+        <p id="DOB_error"></p>
 
-        </div>
-        <div class="mb-3 mt-5">
-          <label  class="form-label">Age</label>
-          <input
-            type="number"
-            class="form-control"
-            id="age"
-            readonly
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-          />
-          <p id="age_error"></p>
-        </div>
-        <div class="mb-3 mt-5">
-          <label  class="form-label">Gender</label
-          ><br />
-          <label>
-            <input type="radio" name="male" value="male" id="male" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" /> Male &nbsp
-          </label>
-          <label>
-            <input type="radio" name="male" value="female" id="female" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" /> Female &nbsp
-          </label>
-          <label>
-            <input type="radio" name="male" value="others" id="others" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" /> Others &nbsp
-          </label>
-          <p id="checked"></p>
-        </div>
-        <div class="mb-3">
-          <label  class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-          />
-          <p id="email_error"></p>
+      </div>
+      <div class="mb-3 mt-5">
+        <label class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" readonly onfocus="onFocusEvent(this)"
+          onblur="onBlurEvent(this)" />
+        <p id="age_error"></p>
+      </div>
+      <div class="mb-3 mt-5">
+        <label class="form-label">Gender</label><br />
+        <label>
+          <input type="radio" name="male" value="male" id="male" onfocus="onFocusEvent(this)"
+            onblur="onBlurEvent(this)" /> Male &nbsp
+        </label>
+        <label>
+          <input type="radio" name="male" value="female" id="female" onfocus="onFocusEvent(this)"
+            onblur="onBlurEvent(this)" /> Female &nbsp
+        </label>
+        <label>
+          <input type="radio" name="male" value="others" id="others" onfocus="onFocusEvent(this)"
+            onblur="onBlurEvent(this)" /> Others &nbsp
+        </label>
+        <p id="checked"></p>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">E-mail address</label>
+        <input type="email" class="form-control" id="email" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" />
+        <p id="email_error"></p>
 
-        </div>
-        <div class="mb-3">
-          <label  class="form-label">Address</label>
-          <textarea class="form-control" name="" id="address" rows="2" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"></textarea>
-          <p id="address_error"></p>
-        </div>
-        <div class="mb-3">
-          <label  class="form-label">State</label>
-          <select name="state" onclick="changeValue(this.value)">
-            <option  disabled selected id="state">State</option>
-            <option value="kerala">Kerala</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Tamilnadu">Tamilnadu</option>
-          </select>
-          <p id="state_error"></p>
-        </div>
-        <div class="mb-3">
-          <label  class="form-label">District</label>
-          <select name="city">
-            <option disabled selected id="city">District</option>
-          </select>
-          <p id="district_error"></p>
-        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Address</label>
+        <textarea class="form-control" name="" id="address" rows="2" onfocus="onFocusEvent(this)"
+          onblur="onBlurEvent(this)"></textarea>
+        <p id="address_error"></p>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">State</label>
+        <select name="state" onclick="changeValue(this.value)">
+          <option disabled selected id="state">State</option>
+          <option value="kerala">Kerala</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Tamilnadu">Tamilnadu</option>
+        </select>
+        <p id="state_error"></p>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">District</label>
+        <select name="city">
+          <option disabled selected id="city">District</option>
+        </select>
+        <p id="district_error"></p>
+      </div>
 
-        <div class="mb-3 mt-5">
-          <label  class="form-label">Username</label>
-          <input
-            type="text"
-            class="form-control"
-            id="userName"
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-          />
-          <p id="userName_error"></p>
+      <div class="mb-3 mt-5">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" id="userName" onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)" />
+        <p id="userName_error"></p>
 
-        </div>
-        <div class="mb-3">
-          <label  class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-          />
-          <p id="password_error"></p>
-          <span class="toggle-password"></span>
-          <div id="validtion_box">
-            <h6>Password mush contain the following</h6>
-            <p class="invalid" id="letter">Lowercase letters</p>
-            <p class="invalid" id="capital">Uppercase letters</p>
-            <p class="invalid" id="number">Numbers</p>
-            <p class="invalid" id="length">Atleast 8 Characters</p>
-          </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" onfocus="onFocusEvent(this)"
+          onblur="onBlurEvent(this)" />
+          <i class="bi bi-eye-slash toggle-password" id="togglePassword" onclick="togglePasswordVisibility('password')"></i>
 
+        <p id="password_error"></p>
+        <span class="toggle-password"></span>
+        <div id="validation_box" style="display:none;">
+          <h6>Password mush contain the following</h6>
+          <p class="invalid" id="letter">Lowercase letters</p>
+          <p class="invalid" id="capital">Uppercase letters</p>
+          <p class="invalid" id="number">Numbers</p>
+          <p class="invalid" id="length">Atleast 8 Characters</p>
         </div>
-        <div class="mb-3">
-          <label  class="form-label"
-            >Confirm password</label
-          >
-          <input
-            type="password"
-            class="form-control"
-            id="confirmPassword"
-            onfocus="onFocusEvent(this)" onblur="onBlurEvent(this)"
-          />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="confirmPassword" onfocus="onFocusEvent(this)"
+          onblur="onBlurEvent(this)" />
+          <i class="bi bi-eye-slash toggle-password" id="toggleConfirmPassword" onclick="togglePasswordVisibility('confirmPassword')"></i>
           <p id="confirmPassword_error"></p>
 
-        </div>
-        <button type="submit" class="btn btn-primary mt-4">Signup</button>
-        <div  class="form-text mt-3" style="text-align: center;">
-          Allready have an account! <a href="/login/login.html">login</a>
-        </div>
-      </form>
-    </div>
-
-    <footer>
-      <div class="footer">
-          <div class="column">
-              <a href="https://www.facebook.com/"><i class="fa fa-facebook" style="width: 50px; height: 50px;"></i></a>
-                  <a href="https://www.instagram.com/"><i class="fa fa-instagram" style="width: 50px; height: 50px;" ></i></a>
-                  <a href="https://www.youtube.com/"><i class="fa fa-youtube" style="width: 50px; height: 50px;"></i></a>
-                  <a href="https://x.com/i/flow/login"><i class="fa fa-twitter" style="width: 50px; height: 50px;"></i></a>
-          </div>
-    
-          <div class="row">
-              <ul>
-                  <li><a href="/contactus/contact.html">Contact us</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Career</a></li>
-              </ul>
-          </div>
       </div>
-    </footer>
-  </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <button type="submit" class="btn btn-primary mt-4">Signup</button>
+      <div class="form-text mt-3" style="text-align: center;">
+        Allready have an account! <a href="/login/login.html">signin</a>
+      </div>
+    </form>
+  </div>
 
-  <script src="/validation/signup-validation.js"></script>
-  <script>
-      // Function to set max attribute of date input to today's date
-      function setMaxDate() {
-            let today = new Date().toISOString().split('T')[0];
-            document.getElementById("dateOfBirth").setAttribute("max", today);
-        }
+  <footer>
+    <div class="footer">
+      <div class="column">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook" style="width: 50px; height: 50px;"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram" style="width: 50px; height: 50px;"></i></a>
+        <a href="https://www.youtube.com/"><i class="fa fa-youtube" style="width: 50px; height: 50px;"></i></a>
+        <a href="https://x.com/i/flow/login"><i class="fa fa-twitter" style="width: 50px; height: 50px;"></i></a>
+      </div>
 
-        // Call setMaxDate function when the page is loaded
-        window.onload = function() {
-            setMaxDate();
+      <div class="row">
+        <ul>
+          <li><a href="/contactus/contact.html">Contact us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-            // Add event listener to handle date changes
-            document.getElementById("dateOfBirth").addEventListener("input", function() {
-                let selectedDate = new Date(this.value);
-                let today = new Date();
-                
-                // If selected date is in the future, reset input value
-                if (selectedDate > today) {
-                    this.value = today.toISOString().split('T')[0];
-                }
-            });
-        };
+<script src="/validation/signup-validation.js"></script>
+<script>
+  // Function to set max attribute of date input to today's date
+  function setMaxDate() {
+    let today = new Date().toISOString().split('T')[0];
+    document.getElementById("dateOfBirth").setAttribute("max", today);
+  }
+
+  // Call setMaxDate function when the page is loaded
+  window.onload = function () {
+    setMaxDate();
+
+    // Add event listener to handle date changes
+    document.getElementById("dateOfBirth").addEventListener("input", function () {
+      let selectedDate = new Date(this.value);
+      let today = new Date();
+
+      // If selected date is in the future, reset input value
+      if (selectedDate > today) {
+        this.value = today.toISOString().split('T')[0];
+      }
+    });
+  };
 
 
-   
-        // Function to calculate age based on date of birth
-        function calculateAge(dateOfBirth) {
-            const today = new Date();
-            const birthDate = new Date(dateOfBirth);
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const monthDiff = today.getMonth() - birthDate.getMonth();
 
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
+  // Function to calculate age based on date of birth
+  function calculateAge(dateOfBirth) {
+    const today = new Date();
+    const birthDate = new Date(dateOfBirth);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
 
-            return age;
-        }
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
 
-        // Update age field when date of birth changes
-        document.getElementById("dateOfBirth").addEventListener("input", function() {
-            const dob = this.value;
-            const ageField = document.getElementById("age");
+    return age;
+  }
 
-            if (dob) {
-                const age = calculateAge(dob);
-                ageField.value = age;
-            } else {
-                ageField.value = '';
-            }
-        });
-  
+  // Update age field when date of birth changes
+  document.getElementById("dateOfBirth").addEventListener("input", function () {
+    const dob = this.value;
+    const ageField = document.getElementById("age");
+
+    if (dob) {
+      const age = calculateAge(dob);
+      ageField.value = age;
+    } else {
+      ageField.value = '';
+    }
+  });
+
+  //password toggle
+  const togglePasswordVisibility = (fieldId) => {
+    const togglePassword = document.querySelector(`#toggle${fieldId}`);
+    const field = document.querySelector(`#${fieldId}`);
+    
+    // Toggle the type attribute
+    const type = field.getAttribute('type') === 'password' ? 'text' : 'password';
+    field.setAttribute('type', type);
+    
+    // Toggle the eye and bi-eye icons
+    togglePassword.classList.toggle('bi-eye-slash');
+    togglePassword.classList.toggle('bi-eye');
+};
+
+
 
 </script>
+
 </html>

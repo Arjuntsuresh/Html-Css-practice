@@ -9,6 +9,8 @@ const userName=document.getElementById('userName');
 const password=document.getElementById('password');
 const confirmPassword=document.getElementById('confirmPassword');
 const form=document.getElementById('form')
+let validationBox = document.getElementById('validation_box');
+
 //access the error tags
 const firstName_error=document.getElementById('firstName_error');
 const lastName_error=document.getElementById('lastName_error');
@@ -47,7 +49,7 @@ form.addEventListener('submit',(x)=>{
     //last name validation
     lastName_error.innerHTML='';
     if (lastName.value.trim() === '' || lastName.value == null) {
-        event.preventDefault();
+        x.preventDefault();
         lastName_error.innerHTML = 'Lastname is required!';
     } else if (!lastName.value.match(namePattern)) {
         x.preventDefault();
@@ -61,12 +63,14 @@ form.addEventListener('submit',(x)=>{
     else{
         DOB_error.innerHTML='';
     }
-    if(age.value =='' || age.value ==null){
+    if (age.value == '' || age.value == null) {
         x.preventDefault();
-        age_error.innerHTML='Age is required!';
-    }
-    else{
-        age_error.innerHTML='';
+        age_error.innerHTML = 'Age is required!';
+    } else if (parseInt(age.value) < 18) {
+        x.preventDefault();
+        age_error.innerHTML = 'Age must be 18 or above!';
+    } else {
+        age_error.innerHTML = '';
     }
     let email_check= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if(email.value =='' || email.value ==null){
@@ -143,6 +147,102 @@ form.addEventListener('submit',(x)=>{
     }
     
 })
+//onfocus and onblur
+  // Show validation box on focus
+  password.onfocus = function() {
+    validationBox.style.display = "block";
+};
+
+// Hide validation box on blur
+password.onblur = function() {
+    validationBox.style.display = "none";
+};
+
+function calculateAge(dob) {
+    const today = new Date();
+    const birthDate = new Date(dob);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
+// Add focus and blur event listeners for input fields
+const inputFields = [
+    { field: firstName, errorField: firstName_error },
+    { field: lastName, errorField: lastName_error },
+    { field: DOB, errorField: DOB_error },
+    { field: age, errorField: age_error },
+    { field: email, errorField: email_error },
+    { field: address, errorField: address_error },
+    { field: userName, errorField: userName_error },
+    { field: password, errorField: password_error },
+    { field: confirmPassword, errorField: confirmPassword_error },
+    { field: male, errorField: checkBox_error },
+    { field: female, errorField: checkBox_error },
+    { field: others, errorField: checkBox_error }
+];
+
+inputFields.forEach(({ field, errorField }) => {
+    field.addEventListener('focus', () => {
+        errorField.innerHTML = '';
+        if (field !== password) {
+            validationBox.style.display = "none";
+        }
+    });
+
+    field.addEventListener('blur', () => {
+        // Re-validate the field on blur to show the error message if it is still invalid
+        if (field === firstName || field === lastName) {
+            if (field.value.trim() === '' || !field.value.match(namePattern)) {
+                errorField.innerHTML = 'Name should contain only letters.';
+            }
+        } else if (field === email) {
+            if (field.value == '' || field.value == null) {
+                errorField.innerHTML = 'Email is required!';
+            } else if (!field.value.match(email_check)) {
+                errorField.innerHTML = 'Email is not valid!';
+            }
+        } else if (field === password) {
+            if (field.value.length < 6) {
+                errorField.innerHTML = 'Password length should be more than 6!';
+                validationBox.style.display = "block";
+            }
+        } else if (field === confirmPassword) {
+            if (field.value !== password.value) {
+                errorField.innerHTML = 'Password doesn\'t match!';
+            } else if (field.value === '' || field.value == null) {
+                errorField.innerHTML = 'Password is required!';
+            }
+        } else if (field === age) {
+            if (field.value === '' || field.value == null) {
+                errorField.innerHTML = 'Age is required!';
+            } else if (parseInt(field.value) < 18) {
+                errorField.innerHTML = 'Age must be 18 or above!';
+            }
+        }else if(field ===DOB){
+            if(parseInt(age.value)<18){
+                DOB_error.innerHTML="Age must be 18 or above!";
+            }
+        }
+         else if (field === male || field === female || field === others) {
+            if (!male.checked && !female.checked && !others.checked) {
+                checkBox_error.innerHTML = 'Please select a gender!';
+            }
+        } else {
+            if (field.value.trim() === '') {
+                errorField.innerHTML = `${field.name} is required!`;
+            }
+        }
+    });
+});
+
+
+
 //State wise drop 
 let state={
     kerala:[
@@ -265,16 +365,6 @@ let letter = document.getElementById('letter');
 let capital = document.getElementById('capital');
 let number = document.getElementById('number');
 let length = document.getElementById('length');
-
-// Show validation box on focus
-password.onfocus = function() {
-    document.getElementById("validation_box").style.display = "block";
-};
-
-// Hide validation box on blur
-password.onblur = function() {
-    document.getElementById("validation_box").style.display = "none";
-};
 
 // Password validation on keyup
 password.onkeyup = function() {
